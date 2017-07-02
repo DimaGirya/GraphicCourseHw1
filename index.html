@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hw1 Dima Girya</title>
+    <link rel="stylesheet" href="style.css">
+    <script src = "bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/mathjs/dist/math.min.js" type="text/javascript"></script>
+    <script src = "scripts.js"></script>
+</head>
+<body  ng-app="graphicCourseHw" ng-controller="ctrl">
+<label>Work space:
+    <input type="number" name="input" ng-model="workSpaceWidth"
+       min="100" max="1000" ng-change = "cleanWorkspace()" required>
+<input type="number" name="input" ng-model="workSpaceHeight"
+       min="100" max="1000" ng-change = "cleanWorkspace()" required>
+</label>
+<button ng-click="cleanWorkspace()">Clean</button>
+Current operation:
+<span id="currentOperation">{{currentOperation}}</span>
+<br>
+<canvas id="workSpace"></canvas>
+<br>
+<button ng-click="operationChange('Line')">Draw line</button>
+<button ng-click="operationChange('Cycle')">Draw Cycle</button>
+<button ng-click="operationChange('Regular polygon')">Regular polygon</button>
+<label>number of ribs:
+    <input type="number" name="input" ng-model="regularPolygonNumberOfRibs"
+           min="3" max="10" required>
+</label>
+<br>
+<br>
+<button ng-click="operationChange('Point')">Draw Point</button>
+<button ng-click="operationChange('Draw curves')">Draw Curves</button>
+
+
+</body>
+</html>
+
+
+

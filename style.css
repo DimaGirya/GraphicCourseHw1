@@ -1,0 +1,15 @@
+.pixel{
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    float:left;
+}
+
+#workSpace{
+    border-style: solid ;
+    border-width: 1px;
+}
+
+#currentOperation{
+    color: green;
+}
